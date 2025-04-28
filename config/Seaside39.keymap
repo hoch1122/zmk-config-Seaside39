@@ -24,7 +24,10 @@
         kore: kore {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(N) &kp S &kp O &kp C &kp C &kp E &kp R &kp H>;
+            bindings =
+                <&kp LS(N) &kp S &kp O &kp C &kp C &kp E &kp R &kp H>,
+                <&macro_tap>;
+
             label = "KORE";
         };
     };
