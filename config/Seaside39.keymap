@@ -18,14 +18,7 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        aa {
-            bindings = <&bt BT_CLR>;
-            key-positions = <30 38>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
         kore: kore {
