@@ -20,18 +20,6 @@
 / {
     combos { compatible = "zmk,combos"; };
 
-    macros {
-        kore: kore {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LS(N) &kp S &kp O &kp C &kp C &kp E &kp R &kp H>,
-                <&macro_tap>;
-
-            label = "KORE";
-        };
-    };
-
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
