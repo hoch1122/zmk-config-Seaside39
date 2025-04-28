@@ -18,14 +18,21 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        aa {
+            bindings = <&bt BT_CLR>;
+            key-positions = <30 38>;
+        };
+    };
 
     macros {
-        to_layer_0: to_layer_0 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "TO_LAYER_0";
+        kore: kore {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N) &kp S &kp O &kp C &kp C &kp E &kp R &kp H>;
+            label = "KORE";
         };
     };
 
