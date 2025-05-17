@@ -44,18 +44,23 @@
         };
     };
 
-    behaviors {
+behaviors {
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
             bindings = <&mo>, <&to_layer_0>;
-
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
-    };
 
-    keymap {
+        mouse_combo_pr: mouse_combo_pr {
+            compatible = "zmk,behavior-combo-press-release";
+            label = "MOUSE_COMBO_PR";
+            #binding-cells = <0>;
+            bindings = <&mkp BTN_MIDDLE &mkp BTN_RIGHT>;
+        };
+    };
+keymap {
         compatible = "zmk,keymap";
 
         default_layer {
@@ -87,10 +92,10 @@
             >;
         };
 
-        MOUSE {
+MOUSE {
             bindings = <
 &trans  &trans     &trans              &kp LS(UP_ARROW)  &kp LS(PG_UP)                                 &trans         &trans     &trans     &trans     &trans
-&trans  &mkp LCLK  &kp LS(LEFT_ARROW)  &kp LS(DOWN)      &kp LS(RIGHT)                                 &trans         &kaiten    &mkp MB3   &mkp MB2   &trans
+&trans  &mkp LCLK  &kp LS(LEFT_ARROW)  &kp LS(DOWN)      &kp LS(RIGHT)                                 &trans         &mouse_combo_pr &mkp MB3   &mkp MB2   &trans
 &trans  &trans     &trans              &trans            &kp LS(PAGE_DOWN)                             &trans         &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans
 &trans  &trans     &trans              &trans            &trans             &trans      &kp LS(PG_UP)  &kp LC(PG_UP)                                   &trans
             >;
