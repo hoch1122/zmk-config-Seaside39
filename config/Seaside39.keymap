@@ -38,7 +38,7 @@
         kaiten: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&mkp MCLK>, <&macro_press>, <&mkp RCLK>;
+            bindings = <&macro_press &mkp MCLK>, <&macro_press &mkp RCLK>;
             label = "NEW_MACRO";
         };
     };
@@ -53,10 +53,10 @@
         };
 
         mouse_combo_pr: mouse_combo_pr {
-            compatible = "zmk,behavior-combo-press-release";
+            compatible = "zmk,behavior-macro";
             label = "MOUSE_COMBO_PR";
             #binding-cells = <0>;
-            bindings = <&mkp BTN_MIDDLE>, <&mkp BTN_RIGHT>;
+            bindings = <&macro_press &mkp BTN_MIDDLE>, <&macro_press &mkp BTN_RIGHT>;
         };
     };
 
