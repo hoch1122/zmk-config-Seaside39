@@ -56,7 +56,7 @@
             compatible = "zmk,behavior-combo-press-release";
             label = "MOUSE_COMBO_PR";
             #binding-cells = <0>;
-            bindings = <&mkp BTN_MIDDLE &mkp BTN_RIGHT>;
+       　   bindings = <&mkp BTN_MIDDLE>, <&mkp BTN_RIGHT>;
         };
     };
 
