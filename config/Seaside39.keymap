@@ -56,7 +56,7 @@
             compatible = "zmk,behavior-macro";
             label = "MOUSE_COMBO_PR";
             #binding-cells = <0>;
-            bindings = <&macro_press &mkp BTN_MIDDLE>, <&macro_press &mkp BTN_RIGHT>;
+            bindings = <&macro_press &mkp BTN_MIDDLE> <&macro_press &mkp BTN_RIGHT>;
         };
     };
 
