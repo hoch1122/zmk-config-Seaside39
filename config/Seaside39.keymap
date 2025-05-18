@@ -38,7 +38,13 @@
         kaiten: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&mkp MCLK &mkp RCLK>;
+            bindings =
+                <&macro_press>,
+                <&mkp MCLK>,
+                <&macro_wait_time 200>,
+                <&mkp RCLK>,
+                <&macro_release>,
+                <&mkp MCLK &mkp RCLK>;
 
             label = "NEW_MACRO";
         };
