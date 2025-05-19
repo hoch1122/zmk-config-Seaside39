@@ -53,8 +53,7 @@
                 <&mkp MCLK>,
                 <&macro_wait_time 200>,
                 <&mkp RCLK>,
-                <&macro_release>,
-                <&mkp MCLK &mkp RCLK>;
+                <&macro_release>;
 
             label = "NEW_MACRO";
         };
