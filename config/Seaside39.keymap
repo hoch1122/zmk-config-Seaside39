@@ -54,8 +54,7 @@
                 <&macro_wait_time 200>,
                 <&mkp RCLK>,
                 <&macro_release>,
-                <&mkr RCLK>,
-                <&mkr MCLK>;
+                <&mkr RCLK &mkr MCLK>;
 
             label = "NEW_MACRO";
         };
@@ -107,7 +106,7 @@
         MOUSE {
             bindings = <
 &trans  &trans  &trans              &kp LS(UP_ARROW)  &kp LC(PG_UP)                          &trans  &trans     &trans     &trans     &trans
-&trans  &trans  &kp LS(LEFT_ARROW)  &kp LS(DOWN)      &kp LS(RIGHT)                          &trans  &kaiten    &mkp MB3   &mkp MB2   &trans
+&trans  &trans  &kp LS(LEFT_ARROW)  &kp LS(DOWN)      &kp LS(RIGHT)                          &trans  &mkp MB1   &mkp MB3   &mkp MB2   &trans
 &trans  &trans  &trans              &trans            &kp LC(PAGE_DOWN)                      &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans
 &trans  &trans  &trans              &trans            &trans             &trans      &trans  &trans                                   &trans
             >;
