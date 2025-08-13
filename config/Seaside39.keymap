@@ -23,7 +23,7 @@
 
         aa {
             bindings = <&bt BT_CLR>;
-            key-positions = <30 38>;
+            key-positions = <20 29>;
         };
 
         ss {
