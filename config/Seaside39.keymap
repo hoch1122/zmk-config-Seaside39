@@ -10,11 +10,14 @@
 &mt {
     flavor = "balanced";
     quick-tap-ms = <300>;
+    require-prior-idle-ms = <150>;
+    hold-trigger-on-release;
 };
 
 &lt {
     flavor = "balanced";
     quick-tap-ms = <300>;
+    require-prior-idle-ms = <150>;
 };
 
 / {
@@ -25,21 +28,29 @@
             bindings = <&bt BT_CLR>;
             key-positions = <29 20>;
             layers = <4>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <500>;
         };
 
         ss {
             bindings = <&bootloader>;
             key-positions = <9 19 38>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <500>;
         };
 
         sr {
             bindings = <&bootloader>;
             key-positions = <0 10 30>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <500>;
         };
 
         winlock {
             bindings = <&kp LG(L)>;
             key-positions = <32 18>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <200>;
         };
     };
 
@@ -103,7 +114,7 @@
             bindings = <&mkp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <150>;
             flavor = "balanced";
         };
     };
